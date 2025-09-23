@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="docs/assets/images/BitcoinTriviaV3.png" alt="Intro" style="width:25%; max-width:100px;">
+</div>
+
 # bitcointrivia.org
 
 > **Open-source, game-based Bitcoin learning — accessible, fun, and trustworthy.**
