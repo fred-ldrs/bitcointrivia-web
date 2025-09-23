@@ -1,4 +1,10 @@
-# Product Vision – bitcointrivia.org
+# bitcointrivia.org
+
+> **Open-source, game-based Bitcoin learning — accessible, fun, and trustworthy.**
+
+---
+
+## Product Vision
 
 **BitcoinTrivia.org** is an open-source, game-based learning platform for everyone interested in Bitcoin.  
 
