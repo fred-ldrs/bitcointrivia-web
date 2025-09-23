@@ -213,3 +213,25 @@ footer a {
   border-radius: 0;
   box-shadow: none
 }
+
+/* GitHub-Link Styling */
+.github-link {
+  color: var(--bitcoin-orange);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.github-link:hover {
+  transform: translateY(-2px);
+}
+
+.github-link svg {
+  fill: var(--bitcoin-orange);
+  transition: fill 0.2s ease;
+}
+
+.github-link:hover svg {
+  fill: #ffad33;
+}
