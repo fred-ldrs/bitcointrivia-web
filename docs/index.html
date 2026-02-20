@@ -9,6 +9,21 @@
 </head>
     
 <body>
+  <!-- App Promotion Banner -->
+  <div id="app-banner" style="display: none;">
+    <div class="banner-content">
+      <span class="banner-text">Note: The Android app offers more content than the web version.</span>
+      <a href="https://play.google.com/store/apps/details?id=com.luederssolutions.bitcointrivia" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="banner-badge">
+        <img src="assets/images/GetItOnGooglePlay_Badge_Web_color_English.png" 
+             alt="Get it on Google Play">
+      </a>
+      <button id="close-banner" class="close-banner" aria-label="Close banner">&times;</button>
+    </div>
+  </div>
+
     <!--
     <div id="password-overlay" style="
         position: fixed; top:0; left:0; width:100vw; height:100vh; background:#000a; 
@@ -55,6 +70,20 @@
           const container = document.querySelector('.container');
           container.style.display = 'block';
           setupQuizControls(); // ruft dein Quiz-Setup auf
+
+          // App Banner Logic
+          const banner = document.getElementById('app-banner');
+          const closeBtn = document.getElementById('close-banner');
+          
+          // Check if banner was previously closed
+          if (!localStorage.getItem('appBannerClosed')) {
+            banner.style.display = 'block';
+          }
+          
+          closeBtn.addEventListener('click', () => {
+            banner.style.display = 'none';
+            localStorage.setItem('appBannerClosed', 'true');
+          });
       </script>
 
       <!--

@@ -8,6 +8,88 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* App Promotion Banner */
+#app-banner {
+  background-color: rgba(247, 147, 26, 0.15);
+  border-bottom: 1px solid rgba(247, 147, 26, 0.3);
+  padding: 8px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.banner-text {
+  color: var(--bitcoin-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.banner-badge {
+  display: inline-flex;
+  align-items: center;
+}
+
+.banner-badge img {
+  height: 32px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.banner-badge:hover img {
+  opacity: 0.8;
+}
+
+.close-banner {
+  background: none;
+  border: none;
+  color: var(--bitcoin-light);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  margin-left: auto;
+}
+
+.close-banner:hover {
+  opacity: 1;
+  background: none;
+}
+
+@media (max-width: 600px) {
+  .banner-content {
+    gap: 10px;
+    padding: 5px 0;
+  }
+  
+  .banner-text {
+    font-size: 0.8rem;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+  
+  .banner-badge img {
+    height: 28px;
+  }
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
