@@ -328,3 +328,26 @@ footer a {
 .github-link:hover svg {
   fill: #ffad33;
 }
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Footer Styles */
+.footer-badge {
+  margin-bottom: 15px;
+}
+
+.footer-github {
+  margin-top: 10px;
+}
+
+.play-badge {
+  height: 50px;
+}
+
+.github-icon {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
