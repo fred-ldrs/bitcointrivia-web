@@ -62,8 +62,16 @@ function showQuestion() {
     const container = document.getElementById("quiz");
     container.innerHTML = `<p><b>${currentQuestion + 1}/${maxQuestionsPerQuiz}:</b> ${q.question}</p>` +
         q.options.map((opt, i) =>
-            `<button onclick="checkAnswer(${i})">${opt}</button>`
+            `<button data-answer="${i}">${opt}</button>`
         ).join("<br>");
+    
+    // Add event listeners to answer buttons
+    const buttons = container.querySelectorAll('button[data-answer]');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            checkAnswer(parseInt(button.getAttribute('data-answer')));
+        });
+    });
 }
 
 function checkAnswer(answerIndex) {
